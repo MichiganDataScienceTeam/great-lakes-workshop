@@ -33,11 +33,12 @@
 #Get rid of any modules that might still be running
 module purge
 
+# Create virtual env
 python3 -m venv myenv
-source myenv/bin/activate
+source ...
 
-# Install the required packages
-pip install -r requirements.txt
+# Install the required packages from requirements.txt
+pip ...
 
 # Run the desired program
-python3 example_script.py
+python3 <batch_filename>
