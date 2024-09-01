@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score, f1_score
 
-# Define a custom dataset
+# Define custom dataset
 class MNISTDataset(Dataset):
     def __init__(self, csv_file):
         self.data = pd.read_csv(csv_file)
@@ -17,15 +17,15 @@ class MNISTDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
-        image = torch.tensor(self.images[idx]).unsqueeze(0)
+        image = torch.tensor(self.images[   idx]).unsqueeze(0)
         label = torch.tensor(self.labels[idx], dtype=torch.long)
         return image, label
 
 # Load the data
-train_data_path = 'mnist_train.csv'  # Replace with your CSV file path
+train_data_path = 'dir_1/dir_2/dir_3'  # Replace with train CSV file path
 train_dataset = MNISTDataset(train_data_path)
 
-test_data_path = 'mnist_test.csv'
+test_data_path = 'dir_1/dir_2/dir_3'  # Replace with test CSV file path
 test_dataset = MNISTDataset(test_data_path)
 
 # DataLoader objects
