@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Indicate the account to charge the job to
-#SBATCH --account=datascience_team
+#SBATCH --account=mdatascience_team
 
 #Indicate a name to give the job. This can be anything, it's just a way to be able to easily track different jobs
 #SBATCH --job-name=example-submit
